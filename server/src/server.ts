@@ -62,6 +62,10 @@ const startApolloServer = async () => {
     server: httpServer,
     path: '/graphql',
   });
+  wsServer.on('headers', (headers) => {
+    headers.push('Access-Control-Allow-Origin: https://your-frontend.com');
+    headers.push('Access-Control-Allow-Credentials: true');
+  });
   
   useServer({ schema,
     context: async (ctx) => {
