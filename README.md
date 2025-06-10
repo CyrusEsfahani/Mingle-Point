@@ -44,3 +44,5 @@ Mingle Point is a cutting-edge dating application designed to help users find th
 
 git clone https://github.com/sheetalmangate/mingle-point.git
 cd mingle-point.
+
+Working on this independenly
