@@ -40,7 +40,7 @@ const startApolloServer = async () => {
   app.use(express.json());
   app.use(
     cors({
-      origin: "http://localhost:3001",
+      origin: "http://localhost:3000",
       methods: ["GET", "POST", "PUT", "DELETE"],
       allowedHeaders: ["Content-Type", "Authorization"],
     }),
@@ -63,7 +63,7 @@ const startApolloServer = async () => {
     path: '/graphql',
   });
   wsServer.on('headers', (headers) => {
-    headers.push('Access-Control-Allow-Origin: https://your-frontend.com');
+    headers.push('Access-Control-Allow-Origin: https://localhost:3000');
     headers.push('Access-Control-Allow-Credentials: true');
   });
   
